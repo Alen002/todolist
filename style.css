@@ -72,3 +72,8 @@ ul li:hover {
     background: lightgreen;
     border: solid 10px lightgreen;
 }
+
+.close {
+    float:right;
+    font-size: 30px;
+}
