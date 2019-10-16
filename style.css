@@ -1,23 +1,44 @@
 body {
-    background: lightblue;
+    background: white;
     padding: 0;
     margin: 0;
     min-width: 300px;
+    font-family: 'Montserrat', sans-serif; /*google font Montserrat */
 }
 
 * {
     box-sizing: border-box;
 }
 
+.header {
+    background: rgb(198, 198, 216);
+    padding: 10px;
+    text-align: center;
+}
+
+.header:after {
+    content: '';
+    display: table;
+    clear: both;  
+}
+
+input {
+    width: 50%;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    border-style: none;
+    float: center;
+}
+
 ul {
     margin: 0;
     padding: 0;
-
 } 
 
 ul li {
     position: relative;
-    background: lightgreen;
+    background: #FFFFFF;
     list-style-type: none;
     cursor: pointer;
     padding: 20px 20px 20px 20px;
@@ -27,5 +48,27 @@ ul li {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+    border-bottom: solid 0.4px lightgrey;
 }
 
+ul li:hover {
+    background: rgb(120, 120, 136);
+}
+
+#button-create {
+    border: none;
+    border: solid 10px lightblue;
+    border-radius: 20px;
+    background: lightblue;
+    font-size: 20px;
+    transition: 1s;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+#button-create:hover {
+    background: lightgreen;
+    border: solid 10px lightgreen;
+}

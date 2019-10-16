@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>To-Do List</title>
 </head>
 <body>
     <div class="container"><!-- start of container -->
         <div class="header" id="header"><!-- start of header-->
-
-            <h1>To-Do List</h1>
+            <h2>To-Do List</h2>
             <input type="text" id="input-text" placeholder="What do you want to do?">
-            <span class="create-button">To-do</span>
+            <span id="button-create" onclick="createTodo()">Create</span>
         </div><!-- /end of header -->
 
         <ul id="list">
