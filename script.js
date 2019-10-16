@@ -26,7 +26,16 @@ function createTodo () {
             this.parentNode.style.display = 'none';
         }
     });  
+
+    //when task completed mark with strike through
+    strikeList = document.querySelectorAll('li');
+    strikeList.forEach((entries) => {
+        entries.onclick = function() {
+            this.style.textDecoration = 'line-through';
+        }
+    }); 
 };
+
 
 
 
