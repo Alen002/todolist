@@ -4,6 +4,7 @@ function createTodo () {
         // create a new task and append it
         let list = document.querySelector('#list');
         let newTodo = document.createElement('li');
+        newTodo.style.textDecoration = 'none';
         list.appendChild(newTodo).innerHTML = text; 
         document.querySelector('#input-text').value = '';
 
@@ -13,8 +14,6 @@ function createTodo () {
         closeButton.className = 'close';
         closeButton.appendChild(icon);
         newTodo.appendChild(closeButton);
-        
-
     } else {
         alert('Please enter a task');
     };
@@ -24,15 +23,19 @@ function createTodo () {
     closeButtons.forEach((entries) => {
         entries.onclick = function() {
             this.parentNode.style.display = 'none';
-        }
+        };
     });  
 
     //when task completed mark with strike through
     strikeList = document.querySelectorAll('li');
     strikeList.forEach((entries) => {
         entries.onclick = function() {
-            this.style.textDecoration = 'line-through';
-        }
+            if(this.style.textDecoration == 'none') {
+                this.style.textDecoration = 'line-through';
+            } else if(this.style.textDecoration == 'line-through') {
+                this.style.textDecoration = 'none';
+            };   
+        };
     }); 
 };
 
